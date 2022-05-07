@@ -1,8 +1,8 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { ArrowLeft } from "phosphor-react";
 
 import { CloseButton } from "../../CloseButton";
-import { ScreenshotButton } from "../ScreenShotButton";
+import { ScreenshotButton } from "../ScreenshotButton";
 
 import { FeedbackType, feedbackTypes } from "..";
 
@@ -13,9 +13,9 @@ type FeedbackContentStepProps = {
 };
 
 const feedbackTypesPlaceholders = {
-  BUG: 'Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo...',
-  IDEA: 'Teve uma ideia de melhoria ou de nova funcionalidade? Conta pra gente!',
-  OTHER: 'Queremos te ouvir. O que você gostaria de nos dizer? ',
+  BUG: "Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo...",
+  IDEA: "Teve uma ideia de melhoria ou de nova funcionalidade? Conta pra gente!",
+  OTHER: "Queremos te ouvir. O que você gostaria de nos dizer? ",
 };
 
 export function FeedbackContentStep({
@@ -24,10 +24,14 @@ export function FeedbackContentStep({
   onFeedbackSent,
 }: FeedbackContentStepProps) {
   const [screenshot, setScreenshot] = useState<string | null>(null);
-  const [comment, setComment] = useState('');
+  const [comment, setComment] = useState("");
 
   const { title, image } = feedbackTypes[feedbackType];
   const placeholder = feedbackTypesPlaceholders[feedbackType];
+
+  useEffect(() => {
+    console.log(comment);
+  }, [comment]);
 
   function handleSubmitFeedback(event: FormEvent) {
     event.preventDefault();
