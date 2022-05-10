@@ -42,4 +42,15 @@ export const styles = StyleSheet.create({
     color: theme.colors.text_primary,
     fontFamily: theme.fonts.regular,
   },
+
+  footer: {
+    flexDirection: "row",
+    marginBottom: 16,
+  },
+
+  buttonTitle: {
+    fontSize: 14,
+    fontFamily: theme.fonts.medium,
+    color: theme.colors.text_on_brand_color,
+  },
 });
