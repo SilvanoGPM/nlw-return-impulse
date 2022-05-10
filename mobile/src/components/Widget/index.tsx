@@ -4,8 +4,10 @@ import { ChatTeardropDots } from "phosphor-react-native";
 import BottomSheet from "@gorhom/bottom-sheet";
 import { gestureHandlerRootHOC } from "react-native-gesture-handler";
 
-import { styles } from "./styles";
+import { Options } from '../Options';
 import { theme } from "../../theme";
+
+import { styles } from "./styles";
 
 function Widget() {
   const bottomSheetRef = useRef<BottomSheet>(null);
@@ -29,7 +31,9 @@ function Widget() {
         ref={bottomSheetRef}
         backgroundStyle={styles.modal}
         handleIndicatorStyle={styles.indicator}
-      ></BottomSheet>
+      >
+        <Options />
+      </BottomSheet>
     </>
   );
 }
