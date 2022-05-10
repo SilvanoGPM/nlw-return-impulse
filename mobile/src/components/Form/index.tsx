@@ -10,6 +10,7 @@ import { ScreenshotButton } from "../ScreenshotButton";
 
 import { styles } from "./styles";
 import { Button } from "../Button";
+import { Copyright } from '../Copyright';
 
 interface FormProps {
   feedbackType: FeedbackType;
@@ -61,6 +62,8 @@ export function Form({ feedbackType }: FormProps) {
           <Text style={styles.buttonTitle}>Enviar Feedback</Text>
         </Button>
       </View>
+
+      <Copyright />
     </View>
   );
 }
