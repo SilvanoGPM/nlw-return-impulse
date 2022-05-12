@@ -22,7 +22,7 @@ O projeto é dividido em, _front-end_, _back-end_ e _mobile_. Cada parte está e
   - [Typescript](https://www.typescriptlang.org/)
   - [Primsa](https://www.prisma.io/)
   - [Jest](https://jestjs.io/pt-BR/)
-- [Mobile 📱:]
+- [Mobile 📱](./mobile):
   - [React Native](https://reactnative.dev/)
   - [Expo](https://expo.dev/)
   - [Typescript](https://www.typescriptlang.org/)
