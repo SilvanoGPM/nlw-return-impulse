@@ -31,8 +31,9 @@ export class SubmitFeedbackUseCase {
 
     const body = [
       `<div style="font-family: sans-serif; font-size: 16px; color #111">`,
-      `<p>Tipo do feedback ${type}</p>`,
+      `<p>Tipo do feedback <strong>${type}</strong></p>`,
       `<p>Comentário ${comment}</p>`,
+      `<img style="max-width: 1200px; width: 100%; max-height: 900px; height: 100%; object-fit: contain" src=${screenshot} />`,
       `</div>`,
     ].join("\n");
 
